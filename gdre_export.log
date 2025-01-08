@@ -1,0 +1,93 @@
+GDRE Tools v0.6.2
+Windows 10.0.19045, NVIDIA GeForce GTX 1650, opengl3
+Extracted 67 files, no errors detected!
+USER ERROR: Cannot get keys from nonexistent section "dependencies".
+   at: ConfigFile::get_section_keys (core\io\config_file.cpp:112)
+USER WARNING: Failed to find gdextension libraries for plugin godot-jolt
+   at: ImportExporter::recreate_plugin_config::<lambda_854eb822a5171f7ebcfe2ff7f943ab3c>::operator () (modules\gdsdecomp\utility\import_exporter.cpp:559)
+USER WARNING: Failed to find library for this platform for plugin godot-jolt
+   at: ImportExporter::recreate_plugin_configs (modules\gdsdecomp\utility\import_exporter.cpp:648)
+Recreated plugin config for virtual_joystick
+USER WARNING: Decompression not implemented yet for texture format ETC2_RGB8
+   at: ImportExporter::_convert_tex (modules\gdsdecomp\utility\import_exporter.cpp:1005)
+USER WARNING: Conversion for Resource of type Texture and format ETC2_RGB8 not implemented
+   at: ImportExporter::report_unsupported_resource (modules\gdsdecomp\utility\import_exporter.cpp:1052)
+Did not convert Texture resource res://.godot/imported/gray_rocks_diff_4k.jpg-7ec0f7e431d83f1ecab7972115f5436a.etc2.ctex
+USER WARNING: Decompression not implemented yet for texture format ETC2_RA_AS_RG
+   at: ImportExporter::_convert_tex (modules\gdsdecomp\utility\import_exporter.cpp:1005)
+USER WARNING: Conversion for Resource of type Texture and format ETC2_RA_AS_RG not implemented
+   at: ImportExporter::report_unsupported_resource (modules\gdsdecomp\utility\import_exporter.cpp:1052)
+Did not convert Texture resource res://.godot/imported/gray_rocks_disp_4k.png-466f08a11cc435f5383b603d8a0c83f2.etc2.ctex
+USER WARNING: Decompression not implemented yet for texture format ASTC_4x4_HDR
+   at: ImportExporter::_convert_tex (modules\gdsdecomp\utility\import_exporter.cpp:1005)
+USER WARNING: Conversion for Resource of type Texture and format ASTC_4x4_HDR not implemented
+   at: ImportExporter::report_unsupported_resource (modules\gdsdecomp\utility\import_exporter.cpp:1052)
+Did not convert Texture resource res://.godot/imported/kloofendal_48d_partly_cloudy_puresky_2k.hdr-9746f91594754e8cd15ec3a1bde9c497.astc.ctex
+USER WARNING: Decompression not implemented yet for texture format ETC2_RGB8
+   at: ImportExporter::_convert_tex (modules\gdsdecomp\utility\import_exporter.cpp:1005)
+Did not convert Texture resource res://.godot/imported/texture_01.png-e24f542d9a5648fd44ee75903f5e049b.etc2.ctex
+Did not rewrite import metadata for res://icon.svg
+Saved project config project.godot.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     0
+Failed scripts:                         0
+Imported resources for export session:  67
+Successfully converted:                 21
+Lossy:                                  1
+Rewrote metadata:                       0
+Non-importable conversions:             1
+Not converted:                          4
+Failed conversions:                     0
+-------------
+
+
+The following files were converted from an import that was stored lossy.
+You may lose fidelity when re-importing these files upon loading the project.
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex to res://.assets/icon.png
+------
+
+The following native plugins failed to have their libraries copied:
+godot-jolt
+------
+
+The following files were converted and saved to a non-original path, but did not have their import data rewritten.
+These files will not be re-imported when loading the project.
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex to res://.assets/icon.png
+------
+
+The following files were not converted because support has not been implemented yet:
+res://.godot/imported/gray_rocks_diff_4k.jpg-7ec0f7e431d83f1ecab7972115f5436a.etc2.ctex
+res://.godot/imported/gray_rocks_disp_4k.png-466f08a11cc435f5383b603d8a0c83f2.etc2.ctex
+res://.godot/imported/kloofendal_48d_partly_cloudy_puresky_2k.hdr-9746f91594754e8cd15ec3a1bde9c497.astc.ctex
+res://.godot/imported/texture_01.png-e24f542d9a5648fd44ee75903f5e049b.etc2.ctex
+
+
+
+---------------------------------IMPORTANT NOTES----------------------------------
+
+The following resource types were detected in the project that conversion is not implemented for yet:
+Type: Texture             	Format: etc2_rgb8
+Type: Texture             	Format: etc2_ra_as_rg
+Type: Texture             	Format: astc_4x4_hdr
+See Export Report to see which resources were not exported.
+You will still be able to edit the project in the editor regardless.
+-------
+The following addons failed to have their libraries copied or plugin.cfg regenerated:
+- godot-jolt
+You may encounter editor errors due to this.
+Tip: Try finding the plugin in the Godot Asset Library or Github.
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.2.1.stable to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+
