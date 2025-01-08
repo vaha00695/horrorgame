@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2gm5ml6ktuf0"]
+
+[ext_resource type="Script" path="res://Player/res/door.gd" id="1_lntgw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wvxos"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rwekr"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.616924)
+script = ExtResource("1_lntgw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.120606, 0, 0, 0, 2.06895, 0, 0, 0, 1.2184, 0, 0, 0)
+shape = SubResource("BoxShape3D_wvxos")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_rwekr")

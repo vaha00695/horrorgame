@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bunvub67icjpg"
+path="res://.godot/imported/texture_01.png-0d32992fcb46e949752d45aebd558472.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Player/res/texture_01.png"
+dest_files=PackedStringArray("res://.godot/imported/texture_01.png-0d32992fcb46e949752d45aebd558472.ctex")
+
+[params]
+
+dummy_value_ignore_me=0

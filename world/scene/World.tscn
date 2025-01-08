@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://biwbvop8ahnap"]
+
+[ext_resource type="Script" path="res://world/scripts/node_3d.gd" id="1_koy42"]
+[ext_resource type="Material" uid="uid://dqq4i277kobvx" path="res://world/res/texture.tres" id="2_o1t4u"]
+[ext_resource type="Texture2D" uid="uid://celsap0tqd7fd" path="res://world/res/kloofendal_48d_partly_cloudy_puresky_2k.hdr" id="3_8cf3n"]
+[ext_resource type="PackedScene" uid="uid://dm2n00ghbt7s1" path="res://world/scene/BoxInteractive.tscn" id="4_vgyy3"]
+[ext_resource type="PackedScene" uid="uid://8g8k8pt3o5fu" path="res://Player/res/player.tscn" id="5_nf8ia"]
+[ext_resource type="PackedScene" uid="uid://b2gm5ml6ktuf0" path="res://Player/res/door12.tscn" id="6_phmm1"]
+[ext_resource type="PackedScene" uid="uid://bpkr1bylw3buf" path="res://Player/res/cardakey.tscn" id="7_1fe1v"]
+
+[sub_resource type="PanoramaSkyMaterial" id="2"]
+panorama = ExtResource("3_8cf3n")
+
+[sub_resource type="Sky" id="3"]
+sky_material = SubResource("2")
+
+[sub_resource type="Environment" id="4"]
+background_mode = 2
+background_energy_multiplier = 0.01
+sky = SubResource("3")
+ssr_enabled = true
+ssao_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.196078, 0.215686, 0.25098, 1)
+fog_density = 0.057
+fog_sky_affect = 0.49
+volumetric_fog_enabled = true
+
+[node name="world" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+script = ExtResource("1_koy42")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.89451, 12.4844, 0)
+light_color = Color(0.811765, 0.937255, 1, 1)
+shadow_enabled = true
+
+[node name="RigidBody3D" parent="." instance=ExtResource("4_vgyy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.62627, 0.512788, 2.24699)
+
+[node name="Player" parent="." instance=ExtResource("5_nf8ia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.09304, 1.59168, 0.689169)
+
+[node name="Node3D" parent="." instance=ExtResource("6_phmm1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8323, 0.132456, 6.61659)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("7_1fe1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.18901, 1.13985, 5.15046)
+
+[node name="STenka" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="STenka"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8374, 0.213318, 5.01925)
+use_collision = true
+size = Vector3(0.162231, 2.46863, 1.97852)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="STenka"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8374, 0.213318, 8.22565)
+use_collision = true
+size = Vector3(0.162231, 2.46863, 1.97852)
+
+[node name="Pol" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Pol"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 10.0155, -1, -0.00484276)
+use_collision = true
+size = Vector3(2, 1, 1)
+material = ExtResource("2_o1t4u")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Pol"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, -24.082, -1, 23.1481)
+material_override = ExtResource("2_o1t4u")
+use_collision = true
+collision_layer = 15
+collision_mask = 15
+size = Vector3(5.4082, 1, 1.22705)
+material = ExtResource("2_o1t4u")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Pol"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 1.05056, -6.33301)
+use_collision = true
+size = Vector3(1, 2.89941, 0.366699)
+material = ExtResource("2_o1t4u")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Pol"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 0.50171, 5.62462)
+use_collision = true
+size = Vector3(1, 2.89941, 0.117432)
+material = ExtResource("2_o1t4u")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dqq4i277kobvx"]
+
+[ext_resource type="Texture2D" uid="uid://bu3ql14d5lro1" path="res://world/res/texture_01.png" id="1_vcuss"]
+
+[resource]
+albedo_texture = ExtResource("1_vcuss")
+metallic_specular = 0.0
+uv1_triplanar = true
+uv1_world_triplanar = true
